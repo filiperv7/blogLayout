@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --purple-bg: #290742;
+  --dark-bg: #170027;
+  --button-bg: #9e6dc2;
+  --white: #fff;
+  --light-purple: #fbf6ff;
+  --green: #4fff4b;
+}
+html {
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  background-color: var(--purple-bg);
+  height: 50%;
+  width: 100vw;
+
+  display: grid;
+  grid-template-areas:
+    'nav nav'
+    'section img';
+  gap: 5rem;
+
+  padding: 4rem 11rem 3rem 8rem;
+}
+
+header nav {
+  grid-area: nav;
+
+  display: flex;
+  justify-content: space-between;
+
+  color: var(--light-purple);
+
+  align-items: center;
+}
+
+header nav ul {
+  display: flex;
+  gap: 1.4rem;
+
+  list-style: none;
+}
+header nav li a {
+  text-decoration: none;
+  color: var(--light-purple);
+}
+/**** nav ul ****/
+
+header nav form {
+  display: flex;
+  align-items: center;
+
+  width: 18rem;
+}
+header nav form input {
+  background-color: var(--dark-bg);
+  border: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+
+  padding: 0.8rem;
+
+  min-height: 40px;
+  flex: 7;
+}
+header nav form button {
+  flex: 2;
+
+  min-height: 40px;
+
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+header nav form button img {
+  width: 22px;
+  position: relative;
+  top: 2px;
+}
+/**** nav form ****/
+
+header section {
+  grid-area: section;
+
+  color: var(--button-bg);
+}
+header section h2 {
+  line-height: 44px;
+}
+header section p {
+  color: var(--light-purple);
+  font-weight: 300;
+
+  margin: 1.4rem 0;
+}
+header section a,
+header section a p {
+  text-decoration: none;
+  font-weight: 600;
+
+  color: var(--button-bg);
+
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+
+  line-height: 7px;
+}
+header section a img {
+  width: 24px;
+
+  filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(90deg)
+    brightness(104%) contrast(97%);
+}
+/**** header section ****/
+
+header img.img-home {
+  grid-area: img;
+  width: 490px;
+
+  box-sizing: content-box;
+
+  border-radius: 5px;
+}
